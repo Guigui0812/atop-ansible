@@ -1,0 +1,7 @@
+---
+# handlers file for atop
+- name: restart atop
+  service:
+    name: atop
+    state: restarted
+  become: yes

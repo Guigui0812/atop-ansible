@@ -1,0 +1,5 @@
+---
+# defaults file for atop
+atop_interval: 600
+atop_log_path: /var/log/atop
+atop_log_generation: 28

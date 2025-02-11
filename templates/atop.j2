@@ -1,0 +1,6 @@
+LOGINTERVAL={{ atop_interval }}
+LOGGENERATIONS={{ atop_log_generation }}
+LOGPATH={{ atop_log_path }}
+{% if atop_log_opts is defined %}
+LOGOPTS={{ atop_log_opts }}
+{% endif %}

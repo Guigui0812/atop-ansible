@@ -1,0 +1,27 @@
+---
+# tasks file for atop
+- name: Setup atop
+  package:
+    name: atop
+    state: present
+  become: yes
+
+- name: Start atop service
+  service:
+    name: atop
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Copy atop configuration file
+  template:
+    src: templates/atop.j2
+    dest: /etc/default/atop
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+  notify: restart atop
+
+
+
